@@ -1,0 +1,7 @@
+.vs
+.DS_Store
+*~
+.import/
+.mono/temp
+.mono/metadata
+logs/
