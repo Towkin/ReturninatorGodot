@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Gameplay/Character/MovementParameter.cs" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.2976 ), 0.0, 7.94344, 0, 0, Vector2( 0.257504, 0.984 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.9928 ), -0.156767, 0.0, 0, 0 ]
+
+[resource]
+script = ExtResource( 1 )
+Value = 100.0
+Factor = SubResource( 1 )
+

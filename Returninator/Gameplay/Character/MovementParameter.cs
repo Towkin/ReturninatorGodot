@@ -1,22 +1,23 @@
-using System;
 using Godot;
 
 namespace Returninator.Gameplay
 {
-    public class MovementParameter: Node
+    public class MovementParameter: Resource
     {
+        public MovementParameter() { }
+
         public MovementParameter(float value, Curve factor)
         {
-            m_Value = value;
-            m_Factor = factor;
+            Value = value;
+            Factor = factor;
         }
 
         [Export]
-        private float m_Value;
+        public float Value { get; private set; }
         [Export]
-        private Curve m_Factor;
+        public Curve Factor { get; private set; }
 
         public float GetValue(float atPosition)
-            => m_Value * m_Factor.Interpolate(atPosition);
+            => Value * Factor.Interpolate(System.Math.Abs(atPosition));
     }
 }
